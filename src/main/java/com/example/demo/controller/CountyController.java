@@ -18,13 +18,12 @@ public class CountyController {
     @GetMapping("/county/{countyNumber}")
     public String getCountyName(@PathVariable("countyNumber") String countyNumber) {
         String url = BASE_URL + countyNumber;
-        
+
         try {
             ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
-            
-            // Sjekk om svaret ble mottatt og har status 200 OK
+
             if (response.getStatusCode().is2xxSuccessful()) {
-                return response.getBody(); // Returner fylkesnavnet
+                return response.getBody();
             } else {
                 return "Feil under henting av fylke.";
             }

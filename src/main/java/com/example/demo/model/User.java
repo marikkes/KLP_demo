@@ -9,32 +9,42 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.GenerationType;
 
-
 @Entity
-@Table(name = "user_info") // Matcher navnet på tabellen
+@Table(name = "user_info")
 public class User {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;  // Primærnøkkel med auto-increment
+    private Long id;
 
     @Column(nullable = false)
     private String email;
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    private UserType type;  // Enum for å begrense til USER eller ADMIN
+    private UserType type;
 
-    // Gettere og settere
-    public Long getId() { return id; }
+    public Long getId() {
+        return id;
+    }
 
-    public void setId(Long id) { this.id = id; }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-    public String getEmail() { return email; }
+    public String getEmail() {
+        return email;
+    }
 
-    public void setEmail(String email) { this.email = email; }
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-    public UserType getType() { return type; }
-    
-    public void setType(UserType type) { this.type = type; }
+    public UserType getType() {
+        return type;
+    }
+
+    public void setType(UserType type) {
+        this.type = type;
+    }
 }
