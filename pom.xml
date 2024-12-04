@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.3.6</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/> 
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>demo</artifactId>
@@ -30,26 +30,19 @@
 		<java.version>21</java.version>
 	</properties>
 	<dependencies>
-    <!-- Spring Boot starter for web -->
     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
-
-    <!-- Spring Boot starter for testing -->
     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-test</artifactId>
         <scope>test</scope>
     </dependency>
-
-    <!-- Spring Boot starter for JPA and Jakarta Persistence -->
     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
-
-    <!-- H2 in-memory database (valgfritt, kan brukes til testing) -->
     <dependency>
         <groupId>com.h2database</groupId>
         <artifactId>h2</artifactId>
